@@ -52,6 +52,32 @@ class Solution {
         }
 
         return max_sum;
+
+        //Second approach, stack approach, not optimal, as it takes O(n) extra space for stack
+        // ListNode ptr = head;
+        // int half_size = 0;
+        // // instead of finding size then halfing, we could use fast and slow pointers
+        // while(ptr!=null){
+        //     half_size++;
+        //     ptr = ptr.next;
+        // }
+        // half_size = half_size/2; //inset first half in stack, and sum with the next
+        // Deque<Integer> stk = new ArrayDeque<>();
+        // ptr = head;
+        // while(half_size>0){
+        //     stk.push(ptr.val);
+        //     ptr = ptr.next;
+        //     half_size--;
+        // }
+        // int max_sum = 0;
+        // while(!stk.isEmpty())
+        // {
+        //     int sum = ptr.val + stk.pop();
+        //     ptr = ptr.next;
+        //     max_sum = Math.max(max_sum,sum);
+        // }
+        // return max_sum;
+
     }
 }
 
